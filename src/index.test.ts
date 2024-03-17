@@ -1,4 +1,4 @@
-import { testServerExists } from "./server/AppServer.test";
+import serverTestAll from "./server/index.test";
 
 /**
  * Test all
@@ -6,5 +6,5 @@ import { testServerExists } from "./server/AppServer.test";
 export default async function testAll() {
     console.log(`Running all tests`);
     
-    testServerExists();
+    serverTestAll();
 }
