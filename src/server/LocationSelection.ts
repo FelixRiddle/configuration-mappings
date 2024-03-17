@@ -1,3 +1,4 @@
+import { BACKDOOR_SERVER_ACCESS_KEYWORD, EXPRESS_AUTHENTICATION_KEYWORD, REAL_ESTATE_KEYWORD } from "./index";
 import AppServerType from "../types/server/AppServerType";
 import AppServer from "./AppServer";
 
@@ -15,8 +16,8 @@ export default class LocationSelection {
         
         const servers: AppServerType = appServer.servers();
         
-        process.env["AUTHENTICATION_URL"] = servers["express-authentication"];
-        process.env["BACKDOOR_SERVER_ACCESS_URL"] = servers["backdoor-server-access"];
-        process.env["REAL_ESTATE_URL"] = servers["express-real-estate"];
+        process.env[EXPRESS_AUTHENTICATION_KEYWORD] = servers["express-authentication"];
+        process.env[BACKDOOR_SERVER_ACCESS_KEYWORD] = servers["backdoor-server-access"];
+        process.env[REAL_ESTATE_KEYWORD] = servers["express-real-estate"];
     }
 }

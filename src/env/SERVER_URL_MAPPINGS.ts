@@ -1,3 +1,5 @@
+import { EXPRESS_AUTHENTICATION_KEYWORD, BACKDOOR_SERVER_ACCESS_KEYWORD, REAL_ESTATE_KEYWORD } from "../server";
+
 const GOOD_ROOTS_URL = process.env.GOOD_ROOTS_URL;
 const AUTHENTICATION_URL = process.env.AUTHENTICATION_URL;
 const BACKDOOR_SERVER_ACCESS_URL = process.env.BACKDOOR_SERVER_ACCESS_URL;
@@ -17,9 +19,9 @@ export const SERVERS_DEFAULT_LOCATION = {
  */
 export function setDefaultLocationEnvironmentVariables() {
     process.env["GOOD_ROOTS_URL"] = SERVERS_DEFAULT_LOCATION["good-roots"];
-    process.env["AUTHENTICATION_URL"] = SERVERS_DEFAULT_LOCATION["express-authentication"];
-    process.env["BACKDOOR_SERVER_ACCESS_URL"] = SERVERS_DEFAULT_LOCATION["backdoor-server-access"];
-    process.env["REAL_ESTATE_URL"] = SERVERS_DEFAULT_LOCATION["express-real-estate"];
+    process.env[EXPRESS_AUTHENTICATION_KEYWORD] = SERVERS_DEFAULT_LOCATION["express-authentication"];
+    process.env[BACKDOOR_SERVER_ACCESS_KEYWORD] = SERVERS_DEFAULT_LOCATION["backdoor-server-access"];
+    process.env[REAL_ESTATE_KEYWORD] = SERVERS_DEFAULT_LOCATION["express-real-estate"];
 }
 
 /**
