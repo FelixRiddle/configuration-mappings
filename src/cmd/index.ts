@@ -1,6 +1,7 @@
 import { ArgumentParser } from "argparse";
 
 import executeTests from "./test";
+import { createAppDataFolder } from "../app";
 
 const parser = new ArgumentParser({
     description: "Argparse example"
@@ -16,9 +17,9 @@ parser.add_argument("--test", {
  */
 export default async function executeCommands() {
     const args = parser.parse_args();
-
-    await executeTests(args);
     
+    await executeTests(args);
+    createAppDataFolder();
     
     // process.exit(0);
 };
