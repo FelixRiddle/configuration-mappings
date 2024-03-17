@@ -24,6 +24,10 @@ export default async function executeCommands() {
     const appServer = new AppServer();
     appServer.createFolder();
     
+    // // Test
+    // appServer.upsertServer("express-authentication", "http://localhost:38001");
+    // const data = appServer.servers();
+    
     await executeTests(args);
     
     // process.exit(0);
