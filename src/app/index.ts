@@ -12,7 +12,7 @@ export function appDataFolderPath() {
     if(userOs === "linux") {
         const userHomeDir = os.homedir();
         const appFolder = `${userHomeDir}/.local/share/good-roots`;
-        console.log(`User home directory: `, userHomeDir);
+        // console.log(`User home directory: `, userHomeDir);
         // console.log(`App folder: `, appFolder);
         
         return appFolder;
