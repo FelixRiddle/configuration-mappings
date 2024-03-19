@@ -5,7 +5,7 @@ import PortSeeker from "felixriddle.port-seeker";
 import { BACKDOOR_SERVER_ACCESS_KEYWORD, EXPRESS_AUTHENTICATION_KEYWORD, REAL_ESTATE_KEYWORD, backdoorServerAccessUrl, expressAuthenticationUrl, realEstateUrl } from "./index";
 import AppServerType from "../types/server/AppServerType";
 import AppServer from "./AppServer";
-import { SERVERS_DEFAULT_LOCATION } from "../env/SERVER_URL_MAPPINGS";
+import { APP_NAME, SERVERS_LOCATION, SERVERS_DEFAULT_LOCATION } from "../env/SERVER_URL_MAPPINGS";
 
 /**
  * Location selection
@@ -53,7 +53,7 @@ export default class LocationSelection {
      * process.env.SERVER_PORT > Default url port > Random ephemeral port
      * 
      */
-    async selectLocation(app: Express) {
+    async selectLocation(app: Express, appName: APP_NAME) {
         
         // Attempt 3
         const attempt3 = async () => {
@@ -88,7 +88,7 @@ export default class LocationSelection {
             console.log(`Attempt 2`);
             
             // Parse url
-            const defaultUrl = SERVERS_DEFAULT_LOCATION['express-authentication'];
+            const defaultUrl = SERVERS_DEFAULT_LOCATION[appName as keyof SERVERS_LOCATION];
             const parsedDefaultUrl = new URL(defaultUrl);
             
             const port = parsedDefaultUrl.port;

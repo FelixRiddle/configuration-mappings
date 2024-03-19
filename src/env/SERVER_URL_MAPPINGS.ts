@@ -5,7 +5,14 @@ const AUTHENTICATION_URL = process.env.AUTHENTICATION_URL;
 const BACKDOOR_SERVER_ACCESS_URL = process.env.BACKDOOR_SERVER_ACCESS_URL;
 const REAL_ESTATE_URL = process.env.REAL_ESTATE_URL;
 
-export const SERVERS_DEFAULT_LOCATION = {
+export interface SERVERS_LOCATION {
+    'good-roots': string,
+    'express-authentication': string,
+    'backdoor-server-access': string,
+    'express-real-estate': string,
+}
+
+export const SERVERS_DEFAULT_LOCATION: SERVERS_LOCATION = {
     "good-roots": "http://localhost:3000",
     "express-authentication": "http://localhost:38001",
     "backdoor-server-access": "http://localhost:38002",
@@ -23,6 +30,8 @@ export function setDefaultLocationEnvironmentVariables() {
     process.env[BACKDOOR_SERVER_ACCESS_KEYWORD] = SERVERS_DEFAULT_LOCATION["backdoor-server-access"];
     process.env[REAL_ESTATE_KEYWORD] = SERVERS_DEFAULT_LOCATION["express-real-estate"];
 }
+
+export type APP_NAME = 'express-authentication' | 'backdoor-server-access' | 'express-real-estate' | 'good-roots';
 
 /**
  * Server default urls
