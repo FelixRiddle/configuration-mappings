@@ -28,7 +28,7 @@ export default class LocationSelection {
      */
     static expressAuthentication() {
         const url = expressAuthenticationUrl();
-        if(!url) {
+        if(!url || url === 'undefined') {
             return SERVERS_DEFAULT_LOCATION["express-authentication"];
         }
         
@@ -40,7 +40,7 @@ export default class LocationSelection {
      */
     static backdoorServerAccess() {
         const url = backdoorServerAccessUrl();
-        if(!url) {
+        if(!url || url === 'undefined') {
             return SERVERS_DEFAULT_LOCATION["backdoor-server-access"];
         }
         
@@ -52,7 +52,7 @@ export default class LocationSelection {
      */
     static realEstate() {
         const url = realEstateUrl();
-        if(!url) {
+        if(!url || url === 'undefined') {
             return SERVERS_DEFAULT_LOCATION["express-real-estate"];
         }
         

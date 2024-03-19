@@ -3,6 +3,7 @@ import { testMessage } from "../test/testMessage";
 import AppServer from "./AppServer";
 import { testServerExists } from "./AppServer.test";
 import LocationSelection from "./LocationSelection";
+import { locationSelectionFallbackToDefault } from "./LocationSelection.test";
 
 /**
  * Test a location was updated
@@ -32,4 +33,5 @@ export function testGetLocationUpdated() {
 export default function serverTestAll() {
     testServerExists();
     testGetLocationUpdated();
+    locationSelectionFallbackToDefault();
 }
