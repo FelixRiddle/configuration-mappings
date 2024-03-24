@@ -55,9 +55,8 @@ export default class LocationSelection {
      */
     async selectLocation(app: Express, appName: APP_NAME) {
         
-        // Attempt 3
+        // --- Ephemeral port ---
         const attempt3 = async () => {
-            // --- Ephemeral port ---
             console.log(`Attempt 3`);
             
             // The original port didn't work?
@@ -83,8 +82,8 @@ export default class LocationSelection {
             });
         }
         
+        // --- Default port ---
         const attempt2 = async () => {
-            // --- Default port ---
             console.log(`Attempt 2`);
             
             // Parse url
@@ -108,8 +107,8 @@ export default class LocationSelection {
             });
         }
         
+        // --- Environment port ---
         const attempt1 = async () => {
-            // --- Environment port ---
             // Will use 3000 if available, otherwise fall back to a random port
             // Try to open the server
             let unparsedPort = process.env.SERVER_PORT;

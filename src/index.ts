@@ -4,6 +4,7 @@ import { expressAuthenticationUrl, backdoorServerAccessUrl, realEstateUrl } from
 import LocationSelection from "./server/LocationSelection";
 import AppServer from "./server/AppServer";
 import serverConfigurationRouter from "./routes";
+import { appDataFolderPath } from "./app/index";
 
 export {
     APP_NAME,
@@ -18,4 +19,6 @@ export {
     expressAuthenticationUrl,
     backdoorServerAccessUrl,
     realEstateUrl,
+    
+    appDataFolderPath,
 };
