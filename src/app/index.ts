@@ -19,7 +19,6 @@ export function linuxPriorityPath() {
         } catch(err: unknown) {
             if(err instanceof Error) {
                 // The folder already exists
-                console.error(err);
                 
                 // Cast to the good one
                 const error = <NodeJS.ErrnoException>err;

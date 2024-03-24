@@ -6,6 +6,10 @@ import AppServer from "./server/AppServer";
 import serverConfigurationRouter from "./routes";
 import { appDataFolderPath } from "./app/index";
 
+import PublicFolder from "./public/PublicFolder";
+import UserFolder from "./public/user/UserFolder";
+import PropertyFolder from "./public/user/property/PropertyFolder";
+
 export {
     APP_NAME,
     SERVERS_DEFAULT_LOCATION,
@@ -21,4 +25,8 @@ export {
     realEstateUrl,
     
     appDataFolderPath,
+    
+    PublicFolder,
+    UserFolder,
+    PropertyFolder,
 };

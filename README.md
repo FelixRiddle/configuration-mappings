@@ -19,3 +19,8 @@ Different than port selection this one doesn't check overrides on env.
 Order: '/srv/www' > '~/.local/share/good-roots'
 1) Try to use /srv/www
 2) Fallback to ~/.local/share/good-roots
+
+- Public server folder
+- Public user data
+
+For now is just public folders for property images
