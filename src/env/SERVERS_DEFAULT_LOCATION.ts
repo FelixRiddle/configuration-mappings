@@ -1,11 +1,6 @@
-export interface SERVERS_LOCATION {
-    'good-roots': string,
-    'express-authentication': string,
-    'backdoor-server-access': string,
-    'express-real-estate': string,
-}
+import { ServersLocation } from "felixriddle.my-types";
 
-const SERVERS_DEFAULT_LOCATION: SERVERS_LOCATION = {
+const SERVERS_DEFAULT_LOCATION: ServersLocation = {
     "good-roots": "http://localhost:3000",
     "express-authentication": "http://localhost:38001",
     "backdoor-server-access": "http://localhost:38002",
