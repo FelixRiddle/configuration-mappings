@@ -19,8 +19,6 @@ export function setDefaultLocationEnvironmentVariables() {
     process.env[REAL_ESTATE_KEYWORD] = SERVERS_DEFAULT_LOCATION["express-real-estate"];
 }
 
-export type APP_NAME = 'express-authentication' | 'backdoor-server-access' | 'express-real-estate' | 'good-roots';
-
 /**
  * Server default urls
  * 

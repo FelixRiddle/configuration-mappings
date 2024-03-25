@@ -1,4 +1,4 @@
-import SERVER_URL_MAPPINGS, { APP_NAME } from "./env/SERVER_URL_MAPPINGS";
+import SERVER_URL_MAPPINGS from "./env/SERVER_URL_MAPPINGS";
 import SERVERS_DEFAULT_LOCATION from "./env/SERVERS_DEFAULT_LOCATION";
 
 import serversEnv, {
@@ -13,7 +13,6 @@ import UserFolder from "./public/user/UserFolder";
 import PropertyFolder from "./public/user/property/PropertyFolder";
 
 export {
-    APP_NAME,
     SERVERS_DEFAULT_LOCATION,
     SERVER_URL_MAPPINGS,
     
