@@ -1,9 +1,11 @@
-import SERVER_URL_MAPPINGS, { SERVERS_DEFAULT_LOCATION, APP_NAME } from "./env/SERVER_URL_MAPPINGS"
+import SERVER_URL_MAPPINGS, { APP_NAME } from "./env/SERVER_URL_MAPPINGS";
+import SERVERS_DEFAULT_LOCATION from "./env/SERVERS_DEFAULT_LOCATION";
 
-import { expressAuthenticationUrl, backdoorServerAccessUrl, realEstateUrl } from "./server";
-import LocationSelection from "./server/LocationSelection";
-import AppServer from "./server/AppServer";
-import serverConfigurationRouter from "./routes";
+import serversEnv, {
+    expressAuthenticationUrl,
+    backdoorServerAccessUrl,
+    realEstateUrl,
+} from "./env/serversEnv";
 import { appDataFolderPath } from "./app/index";
 
 import PublicFolder from "./public/PublicFolder";
@@ -15,11 +17,7 @@ export {
     SERVERS_DEFAULT_LOCATION,
     SERVER_URL_MAPPINGS,
     
-    serverConfigurationRouter,
-    
-    AppServer,
-    LocationSelection,
-    
+    serversEnv,
     expressAuthenticationUrl,
     backdoorServerAccessUrl,
     realEstateUrl,

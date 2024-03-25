@@ -23,3 +23,12 @@ export function backdoorServerAccessUrl() {
 export function realEstateUrl() {
     return process.env[REAL_ESTATE_KEYWORD];
 }
+
+export default {
+    EXPRESS_AUTHENTICATION_KEYWORD,
+    BACKDOOR_SERVER_ACCESS_KEYWORD,
+    REAL_ESTATE_KEYWORD,
+    expressAuthenticationUrl,
+    backdoorServerAccessUrl,
+    realEstateUrl,
+}

@@ -1,8 +1,5 @@
 import { ArgumentParser } from "argparse";
 
-import { createAppDataFolder } from "../app";
-import AppServer from "../server/AppServer";
-
 import executeTests from "./test";
 import executePrintCommands from "./print";
 
@@ -31,11 +28,6 @@ parser.add_argument("--print-property-folder", {
  */
 export default async function executeCommands() {
     const args = parser.parse_args();
-    
-    // Create folders
-    createAppDataFolder();
-    const appServer = new AppServer();
-    appServer.createFolder();
     
     await executeTests(args);
     executePrintCommands(args);

@@ -1,23 +1,11 @@
-import { EXPRESS_AUTHENTICATION_KEYWORD, BACKDOOR_SERVER_ACCESS_KEYWORD, REAL_ESTATE_KEYWORD } from "../server";
+import { EXPRESS_AUTHENTICATION_KEYWORD, BACKDOOR_SERVER_ACCESS_KEYWORD, REAL_ESTATE_KEYWORD } from "./serversEnv";
+
+import SERVERS_DEFAULT_LOCATION from "./SERVERS_DEFAULT_LOCATION";
 
 const GOOD_ROOTS_URL = process.env.GOOD_ROOTS_URL;
 const AUTHENTICATION_URL = process.env.AUTHENTICATION_URL;
 const BACKDOOR_SERVER_ACCESS_URL = process.env.BACKDOOR_SERVER_ACCESS_URL;
 const REAL_ESTATE_URL = process.env.REAL_ESTATE_URL;
-
-export interface SERVERS_LOCATION {
-    'good-roots': string,
-    'express-authentication': string,
-    'backdoor-server-access': string,
-    'express-real-estate': string,
-}
-
-export const SERVERS_DEFAULT_LOCATION: SERVERS_LOCATION = {
-    "good-roots": "http://localhost:3000",
-    "express-authentication": "http://localhost:38001",
-    "backdoor-server-access": "http://localhost:38002",
-    "express-real-estate": "http://localhost:38003"
-};
 
 /**
  * Set servers url as environment variables

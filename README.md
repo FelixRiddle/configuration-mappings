@@ -16,8 +16,8 @@ App default port
 
 Different than port selection this one doesn't check overrides on env.
 
-Order: '/srv/www' > '~/.local/share/good-roots'
-1) Try to use /srv/www
+Order: '/srv/www/good-roots' > '~/.local/share/good-roots'
+1) Try to use /srv/www/good-roots
 2) Fallback to ~/.local/share/good-roots
 
 - Public server folder
