@@ -1,6 +1,13 @@
 # Configuration mappings
 
-Features:
+Default configuration for servers
+
+# Limitations
+
+- Backend only
+
+# Features
+
 - Port selection order
 
 Env > Default > Ephemeral
