@@ -13,9 +13,19 @@ import UserFolder from "./public/user/UserFolder";
 import PropertyFolder from "./public/user/property/PropertyFolder";
 
 import { initializeDotenv } from "./env";
+import {
+	isDevelopment,
+	serverPort,
+	isProduction,
+	frontendUrl,
+} from "./env/env";
 
 export {
 	initializeDotenv,
+	isDevelopment,
+    serverPort,
+    isProduction,
+    frontendUrl,
 	
     SERVERS_DEFAULT_LOCATION,
     SERVER_URL_MAPPINGS,
