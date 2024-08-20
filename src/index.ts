@@ -12,7 +12,11 @@ import PublicFolder from "./public/PublicFolder";
 import UserFolder from "./public/user/UserFolder";
 import PropertyFolder from "./public/user/property/PropertyFolder";
 
+import { initializeDotenv } from "./env";
+
 export {
+	initializeDotenv,
+	
     SERVERS_DEFAULT_LOCATION,
     SERVER_URL_MAPPINGS,
     
