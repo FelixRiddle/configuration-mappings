@@ -28,3 +28,21 @@ export function isProduction() {
 export function frontendUrl() {
     return process.env.FRONTEND_URL;
 }
+
+/**
+ * Api url
+ * 
+ * Mainly for frontend sites
+ */
+export function apiUrl() {
+	const port = process.env.API_PORT || 3000;
+	const host = process.env.API_HOST || 'localhost';
+	const domain = process.env.API_DOMAIN;
+	const path = process.env.API_PATH || "";
+	
+	if(domain) {
+		return `https://${domain}${path}`;
+	}
+	
+	return `http://${host}:${port}${path}`;
+}

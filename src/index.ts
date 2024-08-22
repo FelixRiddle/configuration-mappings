@@ -14,6 +14,7 @@ import PropertyFolder from "./public/user/property/PropertyFolder";
 
 import { initializeDotenv } from "./env";
 import {
+	apiUrl,
 	isDevelopment,
 	serverPort,
 	isProduction,
@@ -22,6 +23,7 @@ import {
 
 export {
 	initializeDotenv,
+	apiUrl,
 	isDevelopment,
     serverPort,
     isProduction,
