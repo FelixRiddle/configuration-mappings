@@ -40,7 +40,7 @@ export function frontendUrl() {
  * @returns The server port number.
  */
 export function apiPort() {
-	return process.env.PORT || (!isDevelopment() && 8080) || 3000;
+	return process.env.API_PORT || (!isDevelopment() && 8080) || 3000;
 }
 
 /**
